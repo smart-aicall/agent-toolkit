@@ -166,7 +166,7 @@ Works with Claude Desktop, Claude Code, or any MCP-compatible AI client.
 ### Option B: Claude Code Skill
 
 ```bash
-git clone https://github.com/smart-aicall/smartcall-agent-toolkit.git ~/.claude/skills/smartcall
+git clone https://github.com/smart-aicall/agent-toolkit.git ~/.claude/skills/smartcall
 ```
 
 Then type `/smartcall` in Claude Code to activate.
@@ -239,8 +239,8 @@ Sign up at [onvocall.com](https://onvocall.com) (or [halfcall.cn](https://halfca
 ## Development
 
 ```bash
-git clone https://github.com/smart-aicall/smartcall-agent-toolkit.git
-cd smartcall-agent-toolkit
+git clone https://github.com/smart-aicall/agent-toolkit.git
+cd agent-toolkit
 npm install
 npm run build
 
