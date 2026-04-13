@@ -166,7 +166,7 @@
 ### 方式 B：Claude Code Skill
 
 ```bash
-git clone https://github.com/smart-aicall/agent-toolkit.git ~/.claude/skills/smartcall
+git clone git@github.com:smart-aicall/agent-toolkit.git ~/.claude/skills/smartcall
 ```
 
 在 Claude Code 里输入 `/smartcall` 即可激活。
@@ -239,7 +239,7 @@ git clone https://github.com/smart-aicall/agent-toolkit.git ~/.claude/skills/sma
 ## 本地开发
 
 ```bash
-git clone https://github.com/smart-aicall/agent-toolkit.git
+git clone git@github.com:smart-aicall/agent-toolkit.git
 cd agent-toolkit
 npm install
 npm run build
