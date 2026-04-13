@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Smart-Call MCP Server
+ * Smart-Call Agent Toolkit
  *
  * Gives any AI agent (Claude, GPT, etc.) the power of enterprise-grade
- * AI outbound calling via the Model Context Protocol.
+ * AI outbound calling via MCP + Claude Code Skill.
  *
  * Usage:
- *   SMARTCALL_API_KEY=sk-xxx npx @smartcall/mcp-server
+ *   SMARTCALL_API_KEY=sk-xxx npx smartcall-agent-toolkit
  */
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'

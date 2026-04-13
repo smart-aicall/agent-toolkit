@@ -121,6 +121,19 @@ export class SmartCallClient {
     return this.put(`/api/v1/external/bots/${botId}/script`, { prompt })
   }
 
+  // ── Webhook ────────────────────────────────────────────
+
+  async getWebhook(programId: string): Promise<any> {
+    return this.get(`/api/v1/external/programs/${programId}/webhook`)
+  }
+
+  async updateWebhook(programId: string, config: {
+    webhookUrl?: string | null
+    webhookSecret?: string | null
+  }): Promise<any> {
+    return this.put(`/api/v1/external/programs/${programId}/webhook`, config)
+  }
+
   // ── Lead Upload ───────────────────────────────────────
 
   async downloadLeadTemplate(programId: string, botId?: string): Promise<any> {
@@ -134,7 +147,7 @@ export class SmartCallClient {
     const url = `${this.baseUrl}${path}`
     const headers: Record<string, string> = {
       'Authorization': `Bearer ${this.apiKey}`,
-      'User-Agent': 'smartcall-mcp/0.1.0',
+      'User-Agent': 'smartcall-agent-toolkit/0.1.0',
     }
 
     const init: RequestInit = {

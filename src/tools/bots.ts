@@ -3,11 +3,13 @@ import { z } from 'zod'
 import type { SmartCallClient } from '../client.js'
 
 export function registerBotTools(server: McpServer, client: SmartCallClient) {
-  server.tool(
+  server.registerTool(
     'list_bots',
-    'List all AI bots in a program. Each bot has its own conversation script and can be assigned to different lead segments.',
     {
-      programId: z.string().describe('The program ID'),
+      description: 'List all AI bots in a program. Each bot has its own conversation script and can be assigned to different lead segments.',
+      inputSchema: {
+        programId: z.string().describe('The program ID'),
+      },
     },
     async ({ programId }) => {
       try {
@@ -24,11 +26,13 @@ export function registerBotTools(server: McpServer, client: SmartCallClient) {
     }
   )
 
-  server.tool(
+  server.registerTool(
     'get_bot_script',
-    'Get the conversation script (prompt) for an AI bot. The script defines how the bot talks to leads: greeting, objection handling, closing, etc.',
     {
-      botId: z.string().describe('The bot ID'),
+      description: 'Get the conversation script (prompt) for an AI bot. The script defines how the bot talks to leads: greeting, objection handling, closing, etc.',
+      inputSchema: {
+        botId: z.string().describe('The bot ID'),
+      },
     },
     async ({ botId }) => {
       try {
@@ -45,12 +49,14 @@ export function registerBotTools(server: McpServer, client: SmartCallClient) {
     }
   )
 
-  server.tool(
+  server.registerTool(
     'update_bot_script',
-    'Update the conversation script (prompt) for an AI bot. This changes what the bot says during calls. The script should include greeting, main pitch, objection handling, and closing.',
     {
-      botId: z.string().describe('The bot ID'),
-      prompt: z.string().describe('The new conversation script/prompt for the bot'),
+      description: 'Update the conversation script (prompt) for an AI bot. This changes what the bot says during calls. The script should include greeting, main pitch, objection handling, and closing.',
+      inputSchema: {
+        botId: z.string().describe('The bot ID'),
+        prompt: z.string().describe('The new conversation script/prompt for the bot'),
+      },
     },
     async ({ botId, prompt }) => {
       try {
@@ -67,12 +73,14 @@ export function registerBotTools(server: McpServer, client: SmartCallClient) {
     }
   )
 
-  server.tool(
+  server.registerTool(
     'download_lead_template',
-    'Download the CSV/Excel template for bulk lead upload. The template includes required columns (phone) and optional variable columns based on the bot script.',
     {
-      programId: z.string().describe('The program ID'),
-      botId: z.string().optional().describe('Optional bot ID to get bot-specific template with custom variables'),
+      description: 'Download the CSV/Excel template for bulk lead upload. The template includes required columns (phone) and optional variable columns based on the bot script.',
+      inputSchema: {
+        programId: z.string().describe('The program ID'),
+        botId: z.string().optional().describe('Optional bot ID to get bot-specific template with custom variables'),
+      },
     },
     async ({ programId, botId }) => {
       try {

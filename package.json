@@ -1,11 +1,11 @@
 {
-  "name": "@smartcall/mcp-server",
+  "name": "smartcall-agent-toolkit",
   "version": "0.1.0",
-  "description": "MCP Server for Smart-Call AI Outbound Platform — give any AI agent the power of enterprise-grade AI outbound calling",
+  "description": "Agent toolkit for Smart-Call AI Outbound Platform — give any AI agent the power of enterprise-grade AI outbound calling",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "smartcall-mcp": "./dist/index.js"
+    "smartcall-agent-toolkit": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,11 +33,12 @@
     "outbound",
     "voice-ai",
     "claude",
+    "agent-toolkit",
     "model-context-protocol"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/smart-aicall/smartcall-mcp.git"
+    "url": "https://github.com/smart-aicall/smartcall-agent-toolkit.git"
   },
   "homepage": "https://halfcall.cn"
 }
