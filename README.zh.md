@@ -175,7 +175,7 @@ git clone git@github.com:smart-aicall/agent-toolkit.git ~/.claude/skills/smartca
 
 ### 获取 API Key
 
-在 [halfcall.cn](https://halfcall.cn)（国内）或 [onvocall.com](https://onvocall.com)（海外）注册，进入 **设置 > API 密钥**，创建新密钥。
+在 [halfcall.cn](https://halfcall.cn)（国内）注册，进入 **设置 > API 密钥**，创建新密钥。海外站 [onvocall.com](https://onvocall.com) 即将上线。
 
 ## 你的 Agent 能做什么
 

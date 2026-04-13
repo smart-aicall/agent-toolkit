@@ -175,7 +175,7 @@ Then type `/smartcall` in Claude Code to activate.
 
 ### Get Your API Key
 
-Sign up at [onvocall.com](https://onvocall.com) (or [halfcall.cn](https://halfcall.cn) for China), go to **Settings > API Keys**, and create a new key.
+Sign up at [halfcall.cn](https://halfcall.cn) (China), go to **Settings > API Keys**, and create a new key. International site [onvocall.com](https://onvocall.com) coming soon.
 
 ## What Your Agent Can Do
 
