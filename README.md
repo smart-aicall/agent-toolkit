@@ -106,26 +106,28 @@ All push actions include retry with exponential backoff (2s → 4s → 8s, up to
 
 ### The Complete Flow
 
+> **API Key** → **Agent push lead** → **Digital employee calls** → **Mid-call actions** → **AI intent analysis** → **Auto push**
+
 ```
-1. Connect          2. Deploy               3. Call + Act         4. Results
-┌──────────┐       ┌──────────┐          ┌─────────────┐       ┌──────────┐
-│ Configure │──────>│ Your AI  │─────────>│ Digital     │──────>│ Intent   │
-│ API Key   │       │ deploys  │          │ employee    │       │ analysis │
-│           │       │ a digital│   ☎️     │ calls, and  │       │ + push   │
-│           │       │ employee │──>📞──>  │ during call:│       │ to:      │
-│           │       │          │          │ · SMS       │       │ · WeChat │
-└──────────┘       └──────────┘          │ · Transfer  │       │ · Feishu │
-                                          │ · API call  │       │ · DingTalk│
-                                          │ · Webhook   │       │ · Your API│
-                                          └─────────────┘       └──────────┘
+                        ┌─────────── During Call ───────────┐
+                        │                                    │
+  Agent                 │  SMS · Transfer · API · Webhook   │
+  pushes  ──── ☎️ ────>│                                    │──── AI ────> Push
+  a lead                └────────────────────────────────────┘   intent     results
+                                                                  │
+                                                                  ├─> WeChat group
+                                                                  ├─> Feishu group
+                                                                  ├─> DingTalk group
+                                                                  ├─> Your server API
+                                                                  └─> Add WeChat friend
 ```
 
-1. **Your agent pushes a lead** — a phone number plus optional context (name, company, reason for calling)
-2. **The digital employee calls automatically** — natural conversation with emotion sensing and active listening
-3. **Mid-call actions fire** — sends SMS, transfers to human, calls your API, whatever the script dictates
-4. **Post-call pipeline triggers** — AI extracts intent, pushes results to WeChat/Feishu/DingTalk/your server, creates tickets, adds friends
+1. **Agent pushes a lead** — phone number + optional context (name, company, reason)
+2. **Digital employee calls** — natural conversation with emotion sensing and active listening
+3. **Mid-call actions fire** — SMS, transfer to human, API calls, webhooks
+4. **Post-call pipeline** — AI extracts intent → pushes to WeChat / Feishu / DingTalk / your server, creates tickets, adds friends
 
-That's it. Your agent has a team of digital employees that don't just talk — they close.
+That's it. Your agent has a team that doesn't just talk — they close.
 
 ## Quick Start
 

@@ -106,26 +106,28 @@
 
 ### 完整流程
 
+> **API Key** → **Agent push lead** → **Digital employee calls** → **Mid-call actions** → **AI intent analysis** → **Auto push**
+
 ```
-1. 配置密钥     2. 部署数字员工     3. 通话 + 动作        4. 意向推送
-┌─────────┐    ┌──────────┐       ┌──────────────┐      ┌──────────┐
-│ 配好     │───>│ Agent    │──────>│ 数字员工      │─────>│ AI 分析   │
-│ API Key  │    │ 部署数字 │       │ 打电话，      │      │ 意向提取  │
-│          │    │ 员工     │  ☎️   │ 通话中可以：  │      │ 然后推送: │
-│          │    │          │─>📞─>│ · 发短信      │      │ · 企微群  │
-│          │    │          │       │ · 转人工      │      │ · 飞书群  │
-└─────────┘    └──────────┘       │ · 调 API     │      │ · 钉钉群  │
-                                   │ · Webhook    │      │ · 你的API │
-                                   └──────────────┘      │ · 加微信  │
-                                                          └──────────┘
+                        ┌─────────── During Call ───────────┐
+                        │                                    │
+  Agent                 │  SMS · Transfer · API · Webhook   │
+  pushes  ──── ☎️ ────>│                                    │──── AI ────> Push
+  a lead                └────────────────────────────────────┘   intent     results
+                                                                  │
+                                                                  ├─> WeChat group
+                                                                  ├─> Feishu group
+                                                                  ├─> DingTalk group
+                                                                  ├─> Your server API
+                                                                  └─> Add WeChat friend
 ```
 
-1. **Agent 推送线索** — 手机号 + 可选变量（姓名、公司、打电话的原因）
-2. **数字员工自动拨打** — 按配好的话术进行自然对话，具备情绪感知和主动倾听
-3. **通话中动作自动触发** — 发短信、转人工、调你的 API，话术怎么配它就怎么做
-4. **通话后流水线启动** — AI 提取意向，推企微/飞书/钉钉/你的服务器，创建工单，自动加好友
+1. **Agent push lead** — phone + optional variables (name, company, reason)
+2. **Digital employee calls** — natural conversation with emotion sensing
+3. **Mid-call actions fire** — SMS, transfer, API calls, webhooks
+4. **Post-call pipeline** — AI extracts intent → pushes to WeChat / Feishu / DingTalk / your API, creates tickets, adds friends
 
-你的 Agent 有了一支不只会说话，还会办事的数字员工团队。
+Your Agent now has a team that doesn't just talk — they close.
 
 ## 快速开始
 
