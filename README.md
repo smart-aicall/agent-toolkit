@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./banner.svg" alt="HalfAI Agent Toolkit" width="100%">
+  <img src="./banner.svg" alt="Onvocall Agent Toolkit" width="100%">
 
   <br/>
   <br/>
@@ -23,21 +23,21 @@
 
 <br/>
 
-# HalfAI Agent Toolkit — AI Digital Employees for Your Agent
+# Onvocall Agent Toolkit — AI Digital Employees for Your Agent
 
-## What is HalfAI?
+## What is Onvocall?
 
-HalfAI is an **AI Digital Employee platform** built by [OnvoCall](https://onvocall.com) (事半科技). Each digital employee is powered by large language models, capable of real-time emotion sensing, active listening, millisecond-level response, and human-like conversation. They can be a sales manager, a customer service rep, a medical assistant, or a marketing specialist — working 24/7 without breaks.
+Onvocall is an **AI Digital Employee platform** built by [OnvoCall](https://onvocall.com) (事半科技). Each digital employee is powered by large language models, capable of real-time emotion sensing, active listening, millisecond-level response, and human-like conversation. They can be a sales manager, a customer service rep, a medical assistant, or a marketing specialist — working 24/7 without breaks.
 
 Outbound calling is just one of their skills. These digital employees hold real phone conversations: greeting, pitching, handling objections, sensing tone shifts, adapting on the fly, and classifying intent. All at enterprise scale.
 
-**HalfAI Agent Toolkit** connects your AI agent (Claude, GPT, or any MCP-compatible agent) to the HalfAI platform. Your agent can deploy digital employees, push leads, monitor call results, adjust conversation scripts in real-time, and receive instant callbacks. All through natural language.
+**Onvocall Agent Toolkit** connects your AI agent (Claude, GPT, or any MCP-compatible agent) to the Onvocall platform. Your agent can deploy digital employees, push leads, monitor call results, adjust conversation scripts in real-time, and receive instant callbacks. All through natural language.
 
 No dashboard clicking. No CSV uploads. Tell your agent what you want. It happens.
 
-## Why HalfAI?
+## Why Onvocall?
 
-Traditional outbound is manual, slow, and robotic. HalfAI digital employees are different:
+Traditional outbound is manual, slow, and robotic. Onvocall digital employees are different:
 
 - **They actually think** — Connected to mainstream LLMs with context memory, complex reasoning, emotion sensing, and active listening. Not robocalls. Real conversations that feel human.
 - **Interrupt anytime** — Users can cut in mid-sentence. The digital employee adapts instantly, just like talking to a real person.
@@ -48,7 +48,7 @@ Traditional outbound is manual, slow, and robotic. HalfAI digital employees are 
 
 ## What Can a Digital Employee Do?
 
-Your AI agent manages a team of specialized digital employees through HalfAI:
+Your AI agent manages a team of specialized digital employees through Onvocall:
 
 - **Sales Manager** — Push a prospect list, let the digital employee cold-call and pitch your product. It handles objections, gauges interest, and your agent gets back a ranked list of hot leads. Script not converting? Your agent rewrites it on the fly.
 
@@ -83,7 +83,7 @@ A digital employee doesn't just talk. It acts. During and after every call, it c
 
 ### After the Call — Intent-Driven Actions
 
-When the call ends, HalfAI analyzes the conversation, extracts structured data, classifies intent, and triggers actions based on the result:
+When the call ends, Onvocall analyzes the conversation, extracts structured data, classifies intent, and triggers actions based on the result:
 
 ```
 Call ends → AI analyzes intent → Routes to action
@@ -250,9 +250,9 @@ SMARTCALL_API_KEY=sk-xxx npm start
 
 ## About
 
-HalfAI Agent Toolkit is open source and maintained by [OnvoCall](https://onvocall.com) (事半科技).
+Onvocall Agent Toolkit is open source and maintained by [OnvoCall](https://onvocall.com) (事半科技).
 
-HalfAI builds digital employees that think, listen, and talk like real people. Every enterprise deserves its own team of digital employees.
+Onvocall builds digital employees that think, listen, and talk like real people. Every enterprise deserves its own team of digital employees.
 
 - International: [onvocall.com](https://onvocall.com)
 - China: [halfcall.cn](https://halfcall.cn)
